@@ -5,7 +5,7 @@
 class: Palavra-chave usada para declarar uma classe em Java.
 AulaEstruturaDeDados: Nome da classe que segue a convenção de capitalização (CamelCase).*/
 
-public class AulaEstruturaDeDados {
+public class Aula1 {
 
 /* public 
 Significado: Este modificador de acesso torna o método acessível de qualquer lugar.
