@@ -43,7 +43,17 @@ parametros).
         String texto = "Olá, mundo!"; // String
         boolean valorBooleano = true; // boolean
 
+        /*
+         System.out.println() - Método utilizado para imprimir
+         "Número inteiro: " + numeroInteiro - Texto contatenado com "+" e o valor va variável
+         ((Object) numeroInteiro) - numeroInteiro, que é do tipo primitivo int é convertido para um objeto da classe 
+         Object. Isso é necessário porque o método getClass() só pode ser chamado em objetos, e tipos primitivos como 
+         int não são objetos.
+        getSimpleName() - Ele retorna o nome simples da classe, ou seja, o nome da classe sem o pacote completo.
+         */
+
         System.out.println("Número inteiro: " + numeroInteiro + " - " + ((Object) numeroInteiro).getClass().getSimpleName());
+        // transforma 10 (int) em um Integer (subclasse de Object).
         System.out.println("Número decimal: " + numeroDecimal + " - " + ((Object) numeroDecimal).getClass().getSimpleName());
         System.out.println("Texto: " + texto + " - " + texto.getClass().getSimpleName());
         System.out.println("Valor booleano: " + valorBooleano + " - " + ((Object) valorBooleano).getClass().getSimpleName());
@@ -58,8 +68,8 @@ parametros).
         System.out.println("a é igual a b? " + (a == b));
         System.out.println("a é maior que b? " + (a > b));
         System.out.println("a é maior que 0 e b é menor que 10? " + (a > 0 && b < 10));
-    }
-        /*
+    
+        
 
         // Estruturas condicionais
         int idade = 20; // Exemplo de entrada
@@ -70,7 +80,7 @@ parametros).
         } else {
             System.out.println("\nVocê é criança.");
         }
-
+           
         // Laços de repetição
         System.out.println("\nLaço for:");
         for (int i = 0; i < 5; i++) {
@@ -86,6 +96,13 @@ parametros).
 
         // Operações com listas (em Java, usamos ArrayList)
         System.out.println("\nOperações com listas:");
+        // java.util.List<Integer> numeros - É uma interface que define o comportamento de uma lista em Java.
+        // Aqui criamos uma variável do tipo List<Integer>, o que significa que ela armazena uma lista de inteiros
+        // new java.util.ArrayList<>() - Estamos criando um novo objetivo da classe ArrayList
+        // new: Aloca memória para o objeto.
+        // ArrayList<>(): Chama o construtor da classe ArrayList para inicializar o objeto.
+        // <> indica que estamos usando generics, ou seja, esta lista só pode armazenar objetos do tipo Integer.
+
         java.util.List<Integer> numeros = new java.util.ArrayList<>();
         numeros.add(10);
         numeros.add(20);
@@ -104,6 +121,13 @@ parametros).
 
         // Operações com conjuntos
         System.out.println("\nOperações com conjuntos:");
+        // java.util.Set<Integer> conjunto1 - É uma interface que define o comportamento de um conjunto em Java.
+        //.Set pertence ao pacote java.util.
+        // new java.util.HashSet<>() - Estamos criando um novo objeto da classe HashSet
+        // new: Aloca memória para o objeto.
+        // HashSet<>: Não permite que elementos iguais (no caso inteiros) sejam armazenados no mesmo conjunto.
+        // <> indica que estamos usando generics, ou seja, este conjunto só pode armazenar objetos do tipo Integer.
+        
         java.util.Set<Integer> conjunto1 = new java.util.HashSet<>();
         java.util.Set<Integer> conjunto2 = new java.util.HashSet<>();
         conjunto1.add(1);
@@ -120,6 +144,13 @@ parametros).
         System.out.println("Interseção: " + intersecao);
 
         // Dicionários (em Java, usamos HashMap)
+
+        // java.util.Map<String, Double> notas - Declara uma variável chamada notas que é do tipo Map.
+        // Cada chave (String no caso) está associada a um valor (Double aqui).
+        // new java.util.HashMap<>() - Cria uma instância de HashMap, que é uma implementação da interface Map.
+        // O HashMap armazena pares de chave-valor e não garante a ordem dos elementos.
+        
+        
         System.out.println("\nDicionário:");
         java.util.Map<String, Double> notas = new java.util.HashMap<>();
         notas.put("Ana", 8.5);
@@ -132,7 +163,7 @@ parametros).
         // Definindo funções (em Java, usamos métodos)
         saudacao("Cleber");
 
-        // Importação de bibliotecas
+        // Utilização de métodos que vem de bibliotecas ou classes padrão da linguagem Java.
         System.out.println("\nExemplo de bibliotecas:");
         double raizQuadrada = Math.sqrt(16);
         System.out.println("Raiz quadrada de 16: " + raizQuadrada);
@@ -143,5 +174,5 @@ parametros).
     // Função para saudação
     public static void saudacao(String nome) {
         System.out.println("Olá, " + nome + "! Bem-vindo à aula.");
-    } */
+    }
 }
