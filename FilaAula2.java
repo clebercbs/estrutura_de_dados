@@ -1,4 +1,5 @@
 public class FilaAula2 {
+    //Atributos da classe
     private int capacidade; // Capacidade máxima da fila
     private int[] itens;    // Array para armazenar os itens da fila
     private int inicio;     // Índice do início da fila
