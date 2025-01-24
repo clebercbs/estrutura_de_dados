@@ -1,9 +1,13 @@
-class ListaAula2 {
+class Lista {
+
+    //Atributos da classe
     private int[] elementos;
     private int tamanho;
 
+    //O construtor da classe iniciar a lista e define o tamanho como 0
     public Lista(int capacidade) {
         elementos = new int[capacidade];
+        //System.out.println(java.util.Arrays.toString(elementos));
         tamanho = 0;
     }
 
@@ -20,6 +24,7 @@ class ListaAula2 {
 
     public void remover(int indice) {
         if (indice < 0 || indice >= tamanho) {
+            //Se o valor for inválido, o programa lança uma exceção (erro)
             throw new IndexOutOfBoundsException("Índice inválido");
         }
         for (int i = indice; i < tamanho - 1; i++) {
@@ -43,7 +48,7 @@ class ListaAula2 {
     }
 }
 
-public class ListaExemplo {
+public class ListaAula2 {
     public static void main(String[] args) {
         Lista lista = new Lista(5);
         lista.adicionar(10);
