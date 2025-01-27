@@ -8,7 +8,7 @@ public class ConjuntoAula2 {
         elementos = new ArrayList<>();
     }
 
-    // Adicionar um elemento ao ConjuntoAula2(sem duplicados)
+    // Adicionar um elemento ao ConjuntoAula2 (sem duplicados)
     public void inserir(int elemento) {
         if (!pertence(elemento)) {
             elementos.add(elemento);
@@ -19,7 +19,11 @@ public class ConjuntoAula2 {
     public void remover(int elemento) {
         for (int i = 0; i < elementos.size(); i++) {
             if (elementos.get(i) == elemento) {
-                elementos.remove(i);
+                // "Shift" manual para evitar o uso direto de .remove()
+                for (int j = i; j < elementos.size() - 1; j++) {
+                    elementos.set(j, elementos.get(j + 1));
+                }
+                elementos.remove(elementos.size() - 1);
                 break;
             }
         }
@@ -72,11 +76,13 @@ public class ConjuntoAula2 {
     // Exibir os elementos do conjunto
     public void exibir() {
         System.out.print("{");
-        for (int i = 0; i < elementos.size(); i++) {
-            System.out.print(elementos.get(i));
+        int i = 0;
+        for (int el : elementos) {
+            System.out.print(el);
             if (i < elementos.size() - 1) {
                 System.out.print(", ");
             }
+            i++;
         }
         System.out.println("}");
     }
@@ -123,4 +129,3 @@ public class ConjuntoAula2 {
         conjunto1.exibir();
     }
 }
-
