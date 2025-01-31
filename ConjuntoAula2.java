@@ -1,13 +1,10 @@
 import java.util.ArrayList;
 
 public class ConjuntoAula2 {
-    private ArrayList<Integer> elementos;
+    // Criação do atributo: elementos. Tratá-se de uma lista dinâmica e armazena números inteiros
+    private ArrayList<Integer> elementos = new ArrayList<>();
 
-    // Construtor
-    public ConjuntoAula2() {
-        elementos = new ArrayList<>();
-    }
-
+  
     // Adicionar um elemento ao ConjuntoAula2 (sem duplicados)
     public void inserir(int elemento) {
         if (!pertence(elemento)) {
